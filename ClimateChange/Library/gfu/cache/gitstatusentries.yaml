@@ -13,6 +13,534 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 6
-  lastUpdatedAtString: 2019-07-01T15:45:57.444-07:00
-  initializedAtString: 2019-07-01T15:38:23.039-07:00
-  entries: []
+  lastUpdatedAtString: 2019-07-01T15:58:03.685-07:00
+  initializedAtString: 2019-07-01T15:58:03.685-07:00
+  entries:
+  - path: ClimateChange\Library\APIUpdater\project-dependencies.graph
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\APIUpdater\project-dependencies.graph
+    projectPath: Library\APIUpdater\project-dependencies.graph
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\assetDatabase3
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\assetDatabase3
+    projectPath: Library\assetDatabase3
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\CurrentLayout.dwlt
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\CurrentLayout.dwlt
+    projectPath: Library\CurrentLayout.dwlt
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\EditorInstance.json
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\EditorInstance.json
+    projectPath: Library\EditorInstance.json
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ClimateChange\Library\EditorOnlyScriptingUserSettings.json
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\EditorOnlyScriptingUserSettings.json
+    projectPath: Library\EditorOnlyScriptingUserSettings.json
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\gfu\cache\gitstatusentries.yaml
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\gfu\cache\gitstatusentries.yaml
+    projectPath: Library\gfu\cache\gitstatusentries.yaml
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\gfu\cache\gittrackingstatus.yaml
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\gfu\cache\gittrackingstatus.yaml
+    projectPath: Library\gfu\cache\gittrackingstatus.yaml
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\gfu\cache\repoinfo.yaml
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\gfu\cache\repoinfo.yaml
+    projectPath: Library\gfu\cache\repoinfo.yaml
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\metadata\15\151a1d946b98deb4b98445400983ba92
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\metadata\15\151a1d946b98deb4b98445400983ba92
+    projectPath: Library\metadata\15\151a1d946b98deb4b98445400983ba92
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\metadata\15\15ca2bebf173f2d4484686a03a45b56d
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\metadata\15\15ca2bebf173f2d4484686a03a45b56d
+    projectPath: Library\metadata\15\15ca2bebf173f2d4484686a03a45b56d
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\metadata\21\21206c65839f84d0e9ae14bc1fdc68db
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\metadata\21\21206c65839f84d0e9ae14bc1fdc68db
+    projectPath: Library\metadata\21\21206c65839f84d0e9ae14bc1fdc68db
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\metadata\22\220224b43fc464c28bc0e8de8f54a432
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\metadata\22\220224b43fc464c28bc0e8de8f54a432
+    projectPath: Library\metadata\22\220224b43fc464c28bc0e8de8f54a432
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\metadata\22\224ede67b4f3a4109bfec4d5cb161b05
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\metadata\22\224ede67b4f3a4109bfec4d5cb161b05
+    projectPath: Library\metadata\22\224ede67b4f3a4109bfec4d5cb161b05
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\metadata\2c\2c942432c8301d3489edbfb539e736bd
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\metadata\2c\2c942432c8301d3489edbfb539e736bd
+    projectPath: Library\metadata\2c\2c942432c8301d3489edbfb539e736bd
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\metadata\3b\3b07d432cba2a4c4f8a2fdea984620b8
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\metadata\3b\3b07d432cba2a4c4f8a2fdea984620b8
+    projectPath: Library\metadata\3b\3b07d432cba2a4c4f8a2fdea984620b8
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\metadata\40\405b9b51bb344a128608d968297df79c
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\metadata\40\405b9b51bb344a128608d968297df79c
+    projectPath: Library\metadata\40\405b9b51bb344a128608d968297df79c
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\metadata\41\4113173d5e95493ab8765d7b08371de4
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\metadata\41\4113173d5e95493ab8765d7b08371de4
+    projectPath: Library\metadata\41\4113173d5e95493ab8765d7b08371de4
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\metadata\48\48c22d5d7479fcb49ab3be0cdd2ccec0
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\metadata\48\48c22d5d7479fcb49ab3be0cdd2ccec0
+    projectPath: Library\metadata\48\48c22d5d7479fcb49ab3be0cdd2ccec0
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\metadata\4b\4b3fa4bde7f1451a8218c03ee6a8ded8
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\metadata\4b\4b3fa4bde7f1451a8218c03ee6a8ded8
+    projectPath: Library\metadata\4b\4b3fa4bde7f1451a8218c03ee6a8ded8
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\metadata\4b\4ba2329b63d54f0187bcaa12486b1b0f
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\metadata\4b\4ba2329b63d54f0187bcaa12486b1b0f
+    projectPath: Library\metadata\4b\4ba2329b63d54f0187bcaa12486b1b0f
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\metadata\53\53ebcfaa2e1e4e2dbc85882cd5a73fa1
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\metadata\53\53ebcfaa2e1e4e2dbc85882cd5a73fa1
+    projectPath: Library\metadata\53\53ebcfaa2e1e4e2dbc85882cd5a73fa1
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\metadata\63\636d33ae594884e7d80b569f429d245d
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\metadata\63\636d33ae594884e7d80b569f429d245d
+    projectPath: Library\metadata\63\636d33ae594884e7d80b569f429d245d
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\metadata\68\68c7e4565cde54155bb78d8e935f1dd4
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\metadata\68\68c7e4565cde54155bb78d8e935f1dd4
+    projectPath: Library\metadata\68\68c7e4565cde54155bb78d8e935f1dd4
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\metadata\68\68c7e4565cde54155bb78d8e935f1ddb
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\metadata\68\68c7e4565cde54155bb78d8e935f1ddb
+    projectPath: Library\metadata\68\68c7e4565cde54155bb78d8e935f1ddb
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\metadata\68\68c7e4565cde54155bb78d8e935f1ddb.info
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\metadata\68\68c7e4565cde54155bb78d8e935f1ddb.info
+    projectPath: Library\metadata\68\68c7e4565cde54155bb78d8e935f1ddb.info
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\metadata\79\790749ba7e4b18141953e39cb13f1b79
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\metadata\79\790749ba7e4b18141953e39cb13f1b79
+    projectPath: Library\metadata\79\790749ba7e4b18141953e39cb13f1b79
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\metadata\80\80a3616ca19596e4da0f10f14d241e9f
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\metadata\80\80a3616ca19596e4da0f10f14d241e9f
+    projectPath: Library\metadata\80\80a3616ca19596e4da0f10f14d241e9f
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\metadata\80\80a939763935fdd40bf953a1e49678cf
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\metadata\80\80a939763935fdd40bf953a1e49678cf
+    projectPath: Library\metadata\80\80a939763935fdd40bf953a1e49678cf
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\metadata\86\863e1b9976c4e46d29bf83928b3a8ab2
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\metadata\86\863e1b9976c4e46d29bf83928b3a8ab2
+    projectPath: Library\metadata\86\863e1b9976c4e46d29bf83928b3a8ab2
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\metadata\86\868fbb4c41814baebc00f96e24ede2f8
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\metadata\86\868fbb4c41814baebc00f96e24ede2f8
+    projectPath: Library\metadata\86\868fbb4c41814baebc00f96e24ede2f8
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\metadata\9c\9c645c01fff7ef4408fce23b5ffb344d
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\metadata\9c\9c645c01fff7ef4408fce23b5ffb344d
+    projectPath: Library\metadata\9c\9c645c01fff7ef4408fce23b5ffb344d
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\metadata\a3\a342381d77833427fa10621e38fbae10
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\metadata\a3\a342381d77833427fa10621e38fbae10
+    projectPath: Library\metadata\a3\a342381d77833427fa10621e38fbae10
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\metadata\a5\a58b6fd31ddc7d8488bd40b29f1472c3
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\metadata\a5\a58b6fd31ddc7d8488bd40b29f1472c3
+    projectPath: Library\metadata\a5\a58b6fd31ddc7d8488bd40b29f1472c3
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\metadata\a8\a83159a46d87d2a4f8cec651049b9231
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\metadata\a8\a83159a46d87d2a4f8cec651049b9231
+    projectPath: Library\metadata\a8\a83159a46d87d2a4f8cec651049b9231
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\metadata\b3\b32abd1c9d73a4cce8389f084ac12b11
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\metadata\b3\b32abd1c9d73a4cce8389f084ac12b11
+    projectPath: Library\metadata\b3\b32abd1c9d73a4cce8389f084ac12b11
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\metadata\b5\b5f4343795a0e4626ac1fe4a9e6fce59
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\metadata\b5\b5f4343795a0e4626ac1fe4a9e6fce59
+    projectPath: Library\metadata\b5\b5f4343795a0e4626ac1fe4a9e6fce59
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\metadata\c7\c743ae24ee231884887054d20ccdd0ab
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\metadata\c7\c743ae24ee231884887054d20ccdd0ab
+    projectPath: Library\metadata\c7\c743ae24ee231884887054d20ccdd0ab
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\metadata\c7\c743ae24ee231884887054d20ccdd0ae
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\metadata\c7\c743ae24ee231884887054d20ccdd0ae
+    projectPath: Library\metadata\c7\c743ae24ee231884887054d20ccdd0ae
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\metadata\d5\d516f2a1bec6a9645a084ef8c9237132
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\metadata\d5\d516f2a1bec6a9645a084ef8c9237132
+    projectPath: Library\metadata\d5\d516f2a1bec6a9645a084ef8c9237132
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\metadata\dc\dce91326f102345f3ba2f0987c0679c2
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\metadata\dc\dce91326f102345f3ba2f0987c0679c2
+    projectPath: Library\metadata\dc\dce91326f102345f3ba2f0987c0679c2
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\metadata\dd\ddb8611e748af425a82a497ac5a98c0c
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\metadata\dd\ddb8611e748af425a82a497ac5a98c0c
+    projectPath: Library\metadata\dd\ddb8611e748af425a82a497ac5a98c0c
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\metadata\ee\eeed6954b3c264ca0b28a92aa6289bf0
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\metadata\ee\eeed6954b3c264ca0b28a92aa6289bf0
+    projectPath: Library\metadata\ee\eeed6954b3c264ca0b28a92aa6289bf0
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\metadata\f1\f1045c695c5bf4fb7b8509687bc60fc0
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\metadata\f1\f1045c695c5bf4fb7b8509687bc60fc0
+    projectPath: Library\metadata\f1\f1045c695c5bf4fb7b8509687bc60fc0
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\metadata\f5\f5f67c52d1564df4a8936ccd202a3bd8
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\metadata\f5\f5f67c52d1564df4a8936ccd202a3bd8
+    projectPath: Library\metadata\f5\f5f67c52d1564df4a8936ccd202a3bd8
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\metadata\f7\f70555f144d8491a825f0804e09c671c
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\metadata\f7\f70555f144d8491a825f0804e09c671c
+    projectPath: Library\metadata\f7\f70555f144d8491a825f0804e09c671c
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\metadata\f9\f9fc9b08ecd899944adf9860b4abd6b6
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\metadata\f9\f9fc9b08ecd899944adf9860b4abd6b6
+    projectPath: Library\metadata\f9\f9fc9b08ecd899944adf9860b4abd6b6
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\metadata\fe\fe5abeadcbe591e4fa9107fbc02f3998
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\metadata\fe\fe5abeadcbe591e4fa9107fbc02f3998
+    projectPath: Library\metadata\fe\fe5abeadcbe591e4fa9107fbc02f3998
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\ProjectSettings.asset
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\ProjectSettings.asset
+    projectPath: Library\ProjectSettings.asset
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\ScriptAssemblies\com.unity.multiplayer-hlapi.Editor.dll
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\ScriptAssemblies\com.unity.multiplayer-hlapi.Editor.dll
+    projectPath: Library\ScriptAssemblies\com.unity.multiplayer-hlapi.Editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\ScriptAssemblies\com.unity.multiplayer-hlapi.Runtime.dll
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\ScriptAssemblies\com.unity.multiplayer-hlapi.Runtime.dll
+    projectPath: Library\ScriptAssemblies\com.unity.multiplayer-hlapi.Runtime.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\ScriptAssemblies\com.unity.multiplayer-weaver.Editor.dll
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\ScriptAssemblies\com.unity.multiplayer-weaver.Editor.dll
+    projectPath: Library\ScriptAssemblies\com.unity.multiplayer-weaver.Editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll
+    projectPath: Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+    projectPath: Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\ScriptAssemblies\Unity.PackageManagerUI.Editor.dll
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\ScriptAssemblies\Unity.PackageManagerUI.Editor.dll
+    projectPath: Library\ScriptAssemblies\Unity.PackageManagerUI.Editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+    projectPath: Library\ScriptAssemblies\Unity.TextMeshPro.dll
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ClimateChange\Library\ScriptAssemblies\Unity.Timeline.dll
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\ScriptAssemblies\Unity.Timeline.dll
+    projectPath: Library\ScriptAssemblies\Unity.Timeline.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+    projectPath: Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll
+    projectPath: Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll
+    projectPath: Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll
+    projectPath: Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll
+    projectPath: Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Library\shadercompiler-UnityShaderCompiler.exe0.log
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Library\shadercompiler-UnityShaderCompiler.exe0.log
+    projectPath: Library\shadercompiler-UnityShaderCompiler.exe0.log
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\ProjectSettings\ProjectSettings.asset
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\ProjectSettings\ProjectSettings.asset
+    projectPath: ProjectSettings\ProjectSettings.asset
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ClimateChange\Temp\ProcessJobs\8af6b610668d541109382e4ca446b42d.clust
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Temp\ProcessJobs\8af6b610668d541109382e4ca446b42d.clust
+    projectPath: Temp\ProcessJobs\8af6b610668d541109382e4ca446b42d.clust
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ClimateChange\Temp\UnityLockfile
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Temp\UnityLockfile
+    projectPath: Temp\UnityLockfile
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ClimateChange\Temp\UnityTempFile-011389f13d2fbf440abe1c3e81629340
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Temp\UnityTempFile-011389f13d2fbf440abe1c3e81629340
+    projectPath: Temp\UnityTempFile-011389f13d2fbf440abe1c3e81629340
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ClimateChange\Temp\UnityTempFile-017cbff493ebac04cbc549a13d7618d8
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Temp\UnityTempFile-017cbff493ebac04cbc549a13d7618d8
+    projectPath: Temp\UnityTempFile-017cbff493ebac04cbc549a13d7618d8
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ClimateChange\Temp\UnityTempFile-01b5c597a01d94840bc4d1c466521122
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Temp\UnityTempFile-01b5c597a01d94840bc4d1c466521122
+    projectPath: Temp\UnityTempFile-01b5c597a01d94840bc4d1c466521122
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ClimateChange\Temp\UnityTempFile-2106881a6351ae84787b3aa91a7ef48c
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Temp\UnityTempFile-2106881a6351ae84787b3aa91a7ef48c
+    projectPath: Temp\UnityTempFile-2106881a6351ae84787b3aa91a7ef48c
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ClimateChange\Temp\UnityTempFile-2fefc0a459231e54da2d5be693b94c1e
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Temp\UnityTempFile-2fefc0a459231e54da2d5be693b94c1e
+    projectPath: Temp\UnityTempFile-2fefc0a459231e54da2d5be693b94c1e
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ClimateChange\Temp\UnityTempFile-38e448e6ce101e742aa641e0b56f402f
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Temp\UnityTempFile-38e448e6ce101e742aa641e0b56f402f
+    projectPath: Temp\UnityTempFile-38e448e6ce101e742aa641e0b56f402f
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ClimateChange\Temp\UnityTempFile-3fcf8969204f46a4b8c1b0a532566e0a
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Temp\UnityTempFile-3fcf8969204f46a4b8c1b0a532566e0a
+    projectPath: Temp\UnityTempFile-3fcf8969204f46a4b8c1b0a532566e0a
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ClimateChange\Temp\UnityTempFile-406da148f631e9b46bea9f805616fb35
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Temp\UnityTempFile-406da148f631e9b46bea9f805616fb35
+    projectPath: Temp\UnityTempFile-406da148f631e9b46bea9f805616fb35
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ClimateChange\Temp\UnityTempFile-514e7def12e2359478f6cdcad34b09c8
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Temp\UnityTempFile-514e7def12e2359478f6cdcad34b09c8
+    projectPath: Temp\UnityTempFile-514e7def12e2359478f6cdcad34b09c8
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ClimateChange\Temp\UnityTempFile-52a8f810fec5d884e960c98b9461a755
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Temp\UnityTempFile-52a8f810fec5d884e960c98b9461a755
+    projectPath: Temp\UnityTempFile-52a8f810fec5d884e960c98b9461a755
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ClimateChange\Temp\UnityTempFile-54e4183b4d8493c4d83baa5ab53e02d9
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Temp\UnityTempFile-54e4183b4d8493c4d83baa5ab53e02d9
+    projectPath: Temp\UnityTempFile-54e4183b4d8493c4d83baa5ab53e02d9
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ClimateChange\Temp\UnityTempFile-55571bc55cb78e948b576ea8a3b9a0b5
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Temp\UnityTempFile-55571bc55cb78e948b576ea8a3b9a0b5
+    projectPath: Temp\UnityTempFile-55571bc55cb78e948b576ea8a3b9a0b5
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ClimateChange\Temp\UnityTempFile-5e0da4358ed89374ca3cdc6f47540a1a
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Temp\UnityTempFile-5e0da4358ed89374ca3cdc6f47540a1a
+    projectPath: Temp\UnityTempFile-5e0da4358ed89374ca3cdc6f47540a1a
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ClimateChange\Temp\UnityTempFile-72d30bdf5a5170241aa278e4e560f193
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Temp\UnityTempFile-72d30bdf5a5170241aa278e4e560f193
+    projectPath: Temp\UnityTempFile-72d30bdf5a5170241aa278e4e560f193
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ClimateChange\Temp\UnityTempFile-8d83bef3b40c9114ea92e89ccd2aab45
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Temp\UnityTempFile-8d83bef3b40c9114ea92e89ccd2aab45
+    projectPath: Temp\UnityTempFile-8d83bef3b40c9114ea92e89ccd2aab45
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ClimateChange\Temp\UnityTempFile-9d195f48d4cb3f643b9896aba3ce2f90
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Temp\UnityTempFile-9d195f48d4cb3f643b9896aba3ce2f90
+    projectPath: Temp\UnityTempFile-9d195f48d4cb3f643b9896aba3ce2f90
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ClimateChange\Temp\UnityTempFile-c21058c34f7bfa24086b6231faf63a60
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Temp\UnityTempFile-c21058c34f7bfa24086b6231faf63a60
+    projectPath: Temp\UnityTempFile-c21058c34f7bfa24086b6231faf63a60
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ClimateChange\Temp\UnityTempFile-c978b71cbbd181545989171f4a669960
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Temp\UnityTempFile-c978b71cbbd181545989171f4a669960
+    projectPath: Temp\UnityTempFile-c978b71cbbd181545989171f4a669960
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ClimateChange\Temp\UnityTempFile-c9dc6463210956c47847cf74d99ee30f
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Temp\UnityTempFile-c9dc6463210956c47847cf74d99ee30f
+    projectPath: Temp\UnityTempFile-c9dc6463210956c47847cf74d99ee30f
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ClimateChange\Temp\UnityTempFile-dd4d348516b81c44d8982068abaeb49b
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Temp\UnityTempFile-dd4d348516b81c44d8982068abaeb49b
+    projectPath: Temp\UnityTempFile-dd4d348516b81c44d8982068abaeb49b
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ClimateChange\Temp\UnityTempFile-e0a8b6e008e60354a8cad6b6d69aa4cb
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Temp\UnityTempFile-e0a8b6e008e60354a8cad6b6d69aa4cb
+    projectPath: Temp\UnityTempFile-e0a8b6e008e60354a8cad6b6d69aa4cb
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ClimateChange\Temp\UnityTempFile-e309e8527ec529d408954cec8e854dda
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Temp\UnityTempFile-e309e8527ec529d408954cec8e854dda
+    projectPath: Temp\UnityTempFile-e309e8527ec529d408954cec8e854dda
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ClimateChange\Temp\UnityTempFile-ef1cbe716141a8b4fb6d3de55d3d2886
+    fullPath: C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Temp\UnityTempFile-ef1cbe716141a8b4fb6d3de55d3d2886
+    projectPath: Temp\UnityTempFile-ef1cbe716141a8b4fb6d3de55d3d2886
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
