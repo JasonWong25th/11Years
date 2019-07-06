@@ -1,7 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GH;
 
+
+//Based off of Raymond's class but rn it don't do anything
+public class PassingInputData : GH.Event
+{
+
+}
 public class InputManager : MonoBehaviour {
 
     protected static InputManager _instance;
@@ -12,14 +19,15 @@ public class InputManager : MonoBehaviour {
     }
 
 
-    protected Vector2 _movement;
+    protected Vector3 _movement = new Vector3(0.0f,0.0f,0.0f);
     protected Vector2 _camera;
     protected bool _inControl;
     protected bool _rush;
     protected bool _eat;
     protected bool _pause;
+    protected bool _mouseClicked;
 
-    public Vector2 MoveInput
+    public Vector3 MoveInput
     {
         get{ return _movement; } //can insert checks in order to manage sensitivity of controller input
     }
@@ -48,7 +56,10 @@ public class InputManager : MonoBehaviour {
     {
         get { return _pause && _inControl; } //should player be able to pause at any time?
     }
-
+    public bool MouseClicked
+    {
+        get { return _mouseClicked; } //should player be able to pause at any time?
+    }
     private void Awake()
     {
         if(_instance == null)
@@ -63,10 +74,11 @@ public class InputManager : MonoBehaviour {
 
     private void Update()
     {
-        MoveInput.Set(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")); //Need to think more about this logic
+        _movement.Set(Input.GetAxis("Horizontal"), 0.0f,Input.GetAxis("Vertical")); //Need to think more about this logic -Jason- I edited it not sure if it works
         CameraInput.Set(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));  //" "
 
-        if (Input.GetButtonDown("Fire1") || Input.GetKeyDown("Fire1"))//Rush Button
+        //I edited the Input for Fires since there was an error for me if you don't have one change it back to what works
+        if (Input.GetButton("Fire1") )//Rush Button
         {
             _rush = true;
         }
@@ -76,7 +88,7 @@ public class InputManager : MonoBehaviour {
         }
 
         //The following isn't good enough because time needs to pass before returning back to false
-        if(Input.GetButtonDown("Fire2") || Input.GetKeyDown("Fire2"))//Eat Button
+        if(Input.GetButton("Fire2"))//Eat Button
         {
             _eat = true;
         }
@@ -85,9 +97,17 @@ public class InputManager : MonoBehaviour {
             _eat = false;
         }
 
-        if(Input.GetButtonDown("Fire3") || Input.GetKeyDown("Fire3"))
+        if(Input.GetButton("Fire3"))
         {
             _pause = !_pause;
+        }
+        if (Input.GetMouseButton(0))
+        {
+            _mouseClicked = true;
+        }
+        else
+        {
+            _mouseClicked = false;
         }
 
         //COMMUNICATION WITH ___?
