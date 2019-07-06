@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using LowPolyAnimalPack;
+using GH;
 
 public class Player : MonoBehaviour
 {
@@ -46,7 +47,7 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float rotSpeed = 80f;
     private float rotX = 0f;
-    private float rotY = 0f;
+    private float rotZ = 0f;
 
     [Header("Gameplay Stats"), Space(5)]
     [SerializeField]
@@ -65,10 +66,16 @@ public class Player : MonoBehaviour
         }
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
+        
         animator.applyRootMotion = false;
 
-    }
+        EventSystem.instance.AddListener<MouseClickedData>(UponMouseClick);
 
+    }
+    private void OnDisable()
+    {
+        EventSystem.instance.RemoveListener<MouseClickedData>(UponMouseClick);
+    }
 
     void MoveAnimation(bool state)
     {
@@ -97,34 +104,20 @@ public class Player : MonoBehaviour
             {
                 health -= depletionCoEff * Time.deltaTime;
             }
+            else
+            {
+                dead = true;
+            }
 
             #region Movement based on Input
             //Also ideally we don't do the direct refernce 
             switch (GameManager.Instance.Platform)
             {
                 case Platform.PC:
-                    // Ideally we don't direct refrence the InputManager
-                    //This is to move the player forward only
-                    if (InputManager.Instance.MouseClicked)
-                    {
-                        Vector3 targetMoveAmount = transform.forward * movementStates[0].moveSpeed;
-                        if (InputManager.Instance.Rush)
-                        {
-                            targetMoveAmount *= 10;
-                        }
-                        moveAmount = Vector3.SmoothDamp(moveAmount, targetMoveAmount, ref smoothMoveVelocity, 0.15f);
-                        //Animation
-                        isMoving = true;
-                    }
-                    else
-                    {
-                        moveAmount *= 0;
-                        isMoving = false;
-                    }
                     //Rotation Code
                     //I feel like we could do this allot more cleanly
                     rotX = InputManager.Instance.MoveInput.x * rotSpeed * Time.deltaTime;
-                    rotY = InputManager.Instance.MoveInput.z * rotSpeed * Time.deltaTime;
+                    rotZ = InputManager.Instance.MoveInput.z * rotSpeed * Time.deltaTime;
 
                     MoveAnimation(isMoving);
                     break;
@@ -141,8 +134,27 @@ public class Player : MonoBehaviour
         }
 
     }
-
-
+    //Decouple attempt
+    void UponMouseClick(MouseClickedData mouseClickedData)
+    {
+        if (mouseClickedData.clicked)
+        {
+            //In Game the player moves differnetly then expected
+            Vector3 targetMoveAmount = this.transform.forward * movementStates[0].moveSpeed;
+            if (InputManager.Instance.Rush)
+            {
+                targetMoveAmount *= 10;
+            }
+            moveAmount = Vector3.SmoothDamp(moveAmount, targetMoveAmount, ref smoothMoveVelocity, 0.15f);
+            //Animation
+            isMoving = true;
+        }
+        else
+        {
+            moveAmount *= 0;
+            isMoving = false;
+        }
+    }
 
     void FixedUpdate()
     {
@@ -150,7 +162,7 @@ public class Player : MonoBehaviour
         Vector3 localMove = transform.TransformDirection(moveAmount) * Time.fixedDeltaTime;
         rb.MovePosition(transform.position + localMove);
         //Apply Rotation
-        transform.Rotate(0.0f, rotX, rotY, Space.Self);
+        transform.Rotate(0.0f, rotX, rotZ, Space.Self);
     }
     //Set animator to the Death State
     public void Die()

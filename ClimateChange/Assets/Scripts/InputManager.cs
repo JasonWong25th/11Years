@@ -5,9 +5,9 @@ using GH;
 
 
 //Based off of Raymond's class but rn it don't do anything
-public class PassingInputData : GH.Event
+public class MouseClickedData : GH.Event
 {
-
+    public bool clicked = false;
 }
 public class InputManager : MonoBehaviour {
 
@@ -103,11 +103,11 @@ public class InputManager : MonoBehaviour {
         }
         if (Input.GetMouseButton(0))
         {
-            _mouseClicked = true;
+            EventSystem.instance.RaiseEvent(new MouseClickedData{ clicked = true});
         }
         else
         {
-            _mouseClicked = false;
+            EventSystem.instance.RaiseEvent(new MouseClickedData { clicked = false });
         }
 
         //COMMUNICATION WITH ___?
