@@ -162,7 +162,7 @@ public class Player : MonoBehaviour
         Vector3 localMove = transform.TransformDirection(moveAmount) * Time.fixedDeltaTime;
         rb.MovePosition(transform.position + localMove);
         //Apply Rotation
-        transform.Rotate(0.0f, rotX, rotZ, Space.Self);
+        transform.Rotate(rotZ, rotX, 0.0f, Space.Self);
     }
     //Set animator to the Death State
     public void Die()
