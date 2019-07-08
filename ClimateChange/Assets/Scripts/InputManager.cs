@@ -4,7 +4,7 @@ using UnityEngine;
 using GH;
 
 
-//Based off of Raymond's class but rn it don't do anything
+//Input Events
 public class MouseClickedData : GH.Event
 {
     public bool clicked = false;
@@ -18,13 +18,27 @@ public class Rushing : GH.Event
 {
     public bool rush = false;
 }
+public class AnalogStick : GH.Event
+{
+    public float horizontal = Input.GetAxis("Horizontal_Controller");
+    public float vertical = Input.GetAxis("Vertical_Controller");
+}
+
+
 public class InputManager : MonoBehaviour {
 
     protected static InputManager _instance;
 
     public static InputManager Instance
     {
-        get { return _instance; }
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = new InputManager();
+            }
+            return _instance;
+        }
     }
 
 
@@ -69,33 +83,36 @@ public class InputManager : MonoBehaviour {
     {
         get { return _mouseClicked; } //should player be able to pause at any time?
     }
-    private void Awake()
-    {
-        if(_instance == null)
-        {
-            _instance = this;
-        }
-        else if(_instance != this)
-        {
-            Destroy(gameObject);
-        }
-    }
+   
 
     private void Update()
     {
-        _movement.Set(Input.GetAxis("Horizontal"), 0.0f,Input.GetAxis("Vertical")); //Need to think more about this logic -Jason- I edited it not sure if it works
+        //_movement.Set(Input.GetAxis("Horizontal"), 0.0f,Input.GetAxis("Vertical")); //Need to think more about this logic -Jason- I edited it not sure if it works
+        if(Input.GetAxis("Vertical_Controller") == 0 && Input.GetAxis("Horizontal_Controller") == 0)
+        {
+            EventSystem.instance.RaiseEvent(new KeyboardPressed
+            {
+                horizontal = Input.GetAxis("Horizontal"),
+                vertical = Input.GetAxis("Vertical")
+            });
+        }
+        else
+        {
+            EventSystem.instance.RaiseEvent(new AnalogStick
+            {
+                horizontal = Input.GetAxis("Horizontal_Controller"),
+                vertical = Input.GetAxis("Vertical_Controller")
+            });
+        }
+        
 
-        EventSystem.instance.RaiseEvent(new KeyboardPressed {
-            horizontal = Input.GetAxis("Horizontal"),
-            vertical = Input.GetAxis("Vertical")
-        });
-
-        CameraInput.Set(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));  //" "
+        //CameraInput.Set(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));  //" "
 
         //I edited the Input for Fires since there was an error for me if you don't have one change it back to what works
         if (Input.GetButton("Fire1") )//Rush Button
         {
-            _rush = true;
+            //_rush = true;
+            Debug.Log("detected rush input");  // Rush input is always getting input...?
             EventSystem.instance.RaiseEvent(new Rushing
             {
                 rush = true
@@ -103,7 +120,7 @@ public class InputManager : MonoBehaviour {
         }
         else 
         {
-            _rush = false;
+            //_rush = false;
             EventSystem.instance.RaiseEvent(new Rushing{rush = false});
         }
 
@@ -121,7 +138,8 @@ public class InputManager : MonoBehaviour {
         {
             _pause = !_pause;
         }
-        if (Input.GetMouseButton(0))
+
+        if (Input.GetMouseButton(0))//Mouse Click
         {
             EventSystem.instance.RaiseEvent(new MouseClickedData{ clicked = true});
         }
@@ -129,8 +147,6 @@ public class InputManager : MonoBehaviour {
         {
             EventSystem.instance.RaiseEvent(new MouseClickedData { clicked = false });
         }
-
-        //COMMUNICATION WITH ___?
 
     }
 

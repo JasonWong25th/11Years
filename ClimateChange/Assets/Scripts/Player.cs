@@ -71,7 +71,7 @@ public class Player : MonoBehaviour
 
         EventSystem.instance.AddListener<MouseClickedData>(UponMouseClick);
         EventSystem.instance.AddListener<KeyboardPressed>(KeyboardInput);
-
+        EventSystem.instance.AddListener<AnalogStick>(ControllerInput);
     }
     private void OnDisable()
     {
@@ -142,6 +142,12 @@ public class Player : MonoBehaviour
         rotZ = keyboardPressedData.vertical * rotSpeed * Time.deltaTime;
     }
 
+    void ControllerInput(AnalogStick analog)
+    {
+        rotX = analog.horizontal * rotSpeed * Time.deltaTime;
+        rotZ = analog.vertical * rotSpeed * Time.deltaTime;
+    }
+
     //Decouple attempt
     void UponMouseClick(MouseClickedData mouseClickedData)
     {
@@ -182,6 +188,8 @@ public class Player : MonoBehaviour
         //Apply Rotation
         transform.Rotate(rotZ, rotX, 0.0f, Space.Self);
     }
+
+    
     //Set animator to the Death State
     public void Die()
     {
