@@ -8,7 +8,7 @@ namespace GH {
 
     }
     public class EventSystem {
-        public static EventSystem _instance = null;
+        private static EventSystem _instance = null;
 
         public static EventSystem instance //Ensures that this is the only instance in the class
         {

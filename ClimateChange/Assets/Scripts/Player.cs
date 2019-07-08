@@ -70,11 +70,14 @@ public class Player : MonoBehaviour
         animator.applyRootMotion = false;
 
         EventSystem.instance.AddListener<MouseClickedData>(UponMouseClick);
+        EventSystem.instance.AddListener<KeyboardPressed>(KeyboardInput);
 
     }
     private void OnDisable()
     {
         EventSystem.instance.RemoveListener<MouseClickedData>(UponMouseClick);
+        EventSystem.instance.RemoveListener<KeyboardPressed>(KeyboardInput);
+
     }
 
     void MoveAnimation(bool state)
@@ -115,9 +118,6 @@ public class Player : MonoBehaviour
             {
                 case Platform.PC:
                     //Rotation Code
-                    //I feel like we could do this allot more cleanly
-                    rotX = InputManager.Instance.MoveInput.x * rotSpeed * Time.deltaTime;
-                    rotZ = InputManager.Instance.MoveInput.z * rotSpeed * Time.deltaTime;
 
                     MoveAnimation(isMoving);
                     break;
@@ -134,6 +134,14 @@ public class Player : MonoBehaviour
         }
 
     }
+
+    void KeyboardInput(KeyboardPressed keyboardPressedData)
+    {
+        //Rotation Code
+        rotX = keyboardPressedData.horizontal * rotSpeed * Time.deltaTime;
+        rotZ = keyboardPressedData.vertical * rotSpeed * Time.deltaTime;
+    }
+
     //Decouple attempt
     void UponMouseClick(MouseClickedData mouseClickedData)
     {
@@ -141,10 +149,12 @@ public class Player : MonoBehaviour
         {
             //In Game the player moves differnetly then expected
             Vector3 targetMoveAmount = this.transform.forward * movementStates[0].moveSpeed;
-            if (InputManager.Instance.Rush)
+
+            /*if (InputManager.Instance.Rush)
             {
                 targetMoveAmount *= 10;
             }
+            */
             moveAmount = Vector3.SmoothDamp(moveAmount, targetMoveAmount, ref smoothMoveVelocity, 0.15f);
             //Animation
             isMoving = true;
@@ -153,6 +163,14 @@ public class Player : MonoBehaviour
         {
             moveAmount *= 0;
             isMoving = false;
+        }
+    }
+
+    void PlayerRush(Rushing rushing)
+    {
+        if (rushing.rush)
+        {
+            moveAmount *= 10;
         }
     }
 

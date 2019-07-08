@@ -9,6 +9,15 @@ public class MouseClickedData : GH.Event
 {
     public bool clicked = false;
 }
+public class KeyboardPressed : GH.Event
+{
+    public float horizontal = Input.GetAxis("Horizontal");
+    public float vertical = Input.GetAxis("Vertical");
+}
+public class Rushing : GH.Event
+{
+    public bool rush = false;
+}
 public class InputManager : MonoBehaviour {
 
     protected static InputManager _instance;
@@ -75,16 +84,27 @@ public class InputManager : MonoBehaviour {
     private void Update()
     {
         _movement.Set(Input.GetAxis("Horizontal"), 0.0f,Input.GetAxis("Vertical")); //Need to think more about this logic -Jason- I edited it not sure if it works
+
+        EventSystem.instance.RaiseEvent(new KeyboardPressed {
+            horizontal = Input.GetAxis("Horizontal"),
+            vertical = Input.GetAxis("Vertical")
+        });
+
         CameraInput.Set(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));  //" "
 
         //I edited the Input for Fires since there was an error for me if you don't have one change it back to what works
         if (Input.GetButton("Fire1") )//Rush Button
         {
             _rush = true;
+            EventSystem.instance.RaiseEvent(new Rushing
+            {
+                rush = true
+            });
         }
         else 
         {
             _rush = false;
+            EventSystem.instance.RaiseEvent(new Rushing{rush = false});
         }
 
         //The following isn't good enough because time needs to pass before returning back to false
