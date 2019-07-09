@@ -4,7 +4,7 @@ using UnityEngine;
 using GH;
 
 
-//Input Events
+#region Input Events
 public class MouseClickedData : GH.Event
 {
     public bool clicked = false;
@@ -23,7 +23,7 @@ public class AnalogStick : GH.Event
     public float horizontal = Input.GetAxis("Horizontal_Controller");
     public float vertical = Input.GetAxis("Vertical_Controller");
 }
-
+#endregion
 
 public class InputManager : MonoBehaviour {
 
@@ -41,7 +41,7 @@ public class InputManager : MonoBehaviour {
         }
     }
 
-
+    #region Variables we aren't currently using
     protected Vector3 _movement = new Vector3(0.0f,0.0f,0.0f);
     protected Vector2 _camera;
     protected bool _inControl;
@@ -83,11 +83,10 @@ public class InputManager : MonoBehaviour {
     {
         get { return _mouseClicked; } //should player be able to pause at any time?
     }
-   
+    #endregion
 
     private void Update()
     {
-        //_movement.Set(Input.GetAxis("Horizontal"), 0.0f,Input.GetAxis("Vertical")); //Need to think more about this logic -Jason- I edited it not sure if it works
         if(Input.GetAxis("Vertical_Controller") == 0 && Input.GetAxis("Horizontal_Controller") == 0)
         {
             EventSystem.instance.RaiseEvent(new KeyboardPressed
@@ -104,9 +103,6 @@ public class InputManager : MonoBehaviour {
                 vertical = Input.GetAxis("Vertical_Controller")
             });
         }
-        
-
-        //CameraInput.Set(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));  //" "
 
         //I edited the Input for Fires since there was an error for me if you don't have one change it back to what works
         if (Input.GetButton("Fire1") )//Rush Button
@@ -125,7 +121,7 @@ public class InputManager : MonoBehaviour {
         }
 
         //The following isn't good enough because time needs to pass before returning back to false
-        if(Input.GetButton("Fire2"))//Eat Button
+        if(Input.GetButtonDown("Fire2"))//Eat Button
         {
             _eat = true;
         }
@@ -139,7 +135,7 @@ public class InputManager : MonoBehaviour {
             _pause = !_pause;
         }
 
-        if (Input.GetMouseButton(0))//Mouse Click
+        if (Input.GetMouseButton(0) || Input.GetKey(KeyCode.Joystick1Button0))//Mouse Click
         {
             EventSystem.instance.RaiseEvent(new MouseClickedData{ clicked = true});
         }

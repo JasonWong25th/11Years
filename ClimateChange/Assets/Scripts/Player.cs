@@ -93,6 +93,7 @@ public class Player : MonoBehaviour
     {
         if (!dead)
         {
+            Debug.Log(rotX + " " + rotZ);
             m_currentTime += Time.deltaTime;
 
             if (m_currentTime >= m_hungerDelpetionTime)
@@ -154,7 +155,7 @@ public class Player : MonoBehaviour
         if (mouseClickedData.clicked)
         {
             //In Game the player moves differnetly then expected
-            Vector3 targetMoveAmount = this.transform.forward * movementStates[0].moveSpeed;
+            Vector3 targetMoveAmount = this.transform.forward * movementStates[0].moveSpeed * 10;
 
             /*if (InputManager.Instance.Rush)
             {
