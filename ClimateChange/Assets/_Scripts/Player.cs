@@ -5,6 +5,11 @@ using UnityEngine.AI;
 using LowPolyAnimalPack;
 using GH;
 
+public class PlayerPosition : GH.Event
+{
+    public Vector3 position;
+}
+
 public class Player : MonoBehaviour
 {
 
@@ -91,6 +96,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        EventSystem.instance.RaiseEvent(new PlayerPosition { position = this.transform.position});
         if (!dead)
         {
             m_currentTime += Time.deltaTime;
