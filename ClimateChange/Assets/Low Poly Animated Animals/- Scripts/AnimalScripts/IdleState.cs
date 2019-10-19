@@ -3,6 +3,11 @@ using System;
 
 namespace LowPolyAnimalPack
 {
+  public class PlayerIdleState: IdleState
+  {
+     
+  }
+
   [Serializable]
   public class IdleState : AnimalState
   {

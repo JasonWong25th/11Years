@@ -4,4 +4,19 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_Scenes/GHSplashVideo.unity
+    guid: 0580e12761915974ab242892af89e01c
+  - enabled: 1
+    path: Assets/_Scenes/Start Screen CrossPlatform.unity
+    guid: b9ae0231805db9148be84eec90308281
+  - enabled: 0
+    path: Assets/_Scenes/Start Screen PC.unity
+    guid: 90fabe7f698ea964ba05f449cf932dc5
+  - enabled: 1
+    path: Assets/_Scenes/Level1.unity
+    guid: d64f9e76513d835448a5cc4ef57ff15a
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 4be363673aec91a47919093ded7b9476,
+      type: 2}

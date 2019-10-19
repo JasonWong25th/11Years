@@ -37,7 +37,6 @@ namespace GH {
 
         public void AddListener<T>(EventDelegate<T> del) where T : Event
         {
-            Debug.Log("AddListener Works/ is called");
             if (delegateLookup.ContainsKey(del))//If delegate is already stored in the dictionary then exit
             {
                 return;

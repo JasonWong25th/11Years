@@ -6,6 +6,7 @@ using UnityEngine.AI;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
+using GH;
 
 namespace LowPolyAnimalPack
 {
@@ -33,6 +34,8 @@ namespace LowPolyAnimalPack
 
     [SerializeField, Tooltip("How far away from it's origin this animal will wander by itself.")]
     private float wanderZone = 10f;
+
+        protected bool isPlayer = false;
     public float MaxDistance
     {
       get
@@ -87,7 +90,7 @@ namespace LowPolyAnimalPack
     [SerializeField, Tooltip("This animal will be peaceful towards species in this list.")]
     private string[] nonAgressiveTowards;
 
-    private static List<WanderScript> allAnimals = new List<WanderScript>();
+    protected static List<WanderScript> allAnimals = new List<WanderScript>();
     public static List<WanderScript> AllAnimals { get { return allAnimals; } }
 
     [Space(), Header("Surface Rotation"), Space(5)]
@@ -112,7 +115,7 @@ namespace LowPolyAnimalPack
     private Color awarnessColor = new Color(1f, 0f, 1f, 1f);
     private Color scentColor = new Color(1f, 0f, 0f, 1f);
     private Animator animator;
-    private CharacterController characterController;
+    protected CharacterController characterController;
     private NavMeshAgent navMeshAgent;
     private Vector3 origin;
     private int totalIdleStateWeight;
@@ -215,7 +218,7 @@ namespace LowPolyAnimalPack
       {
         transform.GetChild(0).gameObject.AddComponent<SurfaceRotation>().SetRotationSpeed(surfaceRotationSpeed);
       }
-
+      
       allAnimals.Add(this);
     }
 
@@ -309,6 +312,10 @@ namespace LowPolyAnimalPack
           }
 
           ChaseAnimal(allAnimals[i]);
+                    if (allAnimals[i].isPlayer)
+                    {
+                        Debug.Log("Chasing Player");
+                    }
           return;
         }
       }
@@ -343,7 +350,7 @@ namespace LowPolyAnimalPack
       }
     }
 
-    private void BeginIdleState(bool firstState = false)
+    public virtual void BeginIdleState(bool firstState = false)
     {
       if (!firstState)
       {
@@ -478,7 +485,7 @@ namespace LowPolyAnimalPack
       DecideNextState(false);
     }
 
-    private void RunAwayFromAnimal(WanderScript predator)
+    public virtual void RunAwayFromAnimal(WanderScript predator)
     {
       moving = true;
 
@@ -543,7 +550,7 @@ namespace LowPolyAnimalPack
       }
     }
 
-    private void NonNavMeshRunAwayFromAnimal(WanderScript predator)
+    public virtual void NonNavMeshRunAwayFromAnimal(WanderScript predator)
     {
       moving = true;
 
@@ -645,7 +652,11 @@ namespace LowPolyAnimalPack
 
     private IEnumerator ChaseState(WanderScript prey)
     {
-      moving = true;
+//            if (prey.isPlayer)
+//            {
+//                Debug.Log("In The Chase State");
+//            }
+            moving = true;
 
       navMeshAgent.speed = movementStates[currentState].moveSpeed;
       navMeshAgent.angularSpeed = movementStates[currentState].turnSpeed;
@@ -655,11 +666,16 @@ namespace LowPolyAnimalPack
       bool gotAway = false;
       while ((navMeshAgent.remainingDistance > navMeshAgent.stoppingDistance || timeMoving < 0.1f) && timeMoving < ScriptableAnimalStats.stamina)
       {
+                if (prey.isPlayer)
+               {
+                   Debug.Log("Getting Chasing Player");
+                    EventSystem.instance.RaiseEvent(new ToggleDangerUI { value = true });
+                }
         navMeshAgent.SetDestination(prey.transform.position);
 
         timeMoving += Time.deltaTime;
 
-        if (Vector3.Distance(transform.position, prey.transform.position) < 2f)
+        if (Vector3.Distance(transform.position, prey.transform.position) < 10f)
         {
           if (logChanges)
           {
@@ -672,6 +688,10 @@ namespace LowPolyAnimalPack
           }
 
           AttackAnimal(prey);
+                    if (prey.isPlayer)
+                    {
+                        Debug.Log("Calling method Attack Animal");
+                    }
           yield break;
         }
 
@@ -684,6 +704,8 @@ namespace LowPolyAnimalPack
 
         yield return null;
       }
+
+            EventSystem.instance.RaiseEvent(new ToggleDangerUI { value = false });
 
       navMeshAgent.SetDestination(transform.position);
 
@@ -812,6 +834,10 @@ namespace LowPolyAnimalPack
         if (timer > ScriptableAnimalStats.attackSpeed)
         {
           target.TakeDamage(ScriptableAnimalStats.power);
+                    if (target.isPlayer)
+                    {
+                        Debug.Log("Player Attacked by stuff" + gameObject.name);
+                    }
           timer = 0f;
         }
 
@@ -832,7 +858,10 @@ namespace LowPolyAnimalPack
       {
         return;
       }
-
+            if (isPlayer)
+            {
+                Debug.Log("Player Getting Attacked");
+            }
       if (logChanges)
       {
         Debug.Log(string.Format("{0}: Getting attacked by {1}!", gameObject.name, attacker.gameObject.name));
@@ -891,7 +920,7 @@ namespace LowPolyAnimalPack
       }
     }
 
-    public void Die()
+    public virtual void Die()
     {
       if (logChanges)
       {

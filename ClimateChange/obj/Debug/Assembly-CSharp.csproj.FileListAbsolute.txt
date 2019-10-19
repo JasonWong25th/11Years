@@ -452,3 +452,13 @@ C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\obj\Debug\Assembl
 C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\obj\Debug\Assembly-CSharp.dll
 C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\obj\Debug\Assembly-CSharp.pdb
+C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Temp\bin\Debug\Unity.InputSystem.dll
+C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Temp\bin\Debug\Boo.Lang.dll
+C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Temp\bin\Debug\UnityEditor.UI.dll
+C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Temp\bin\Debug\FullscreenEditor.pdb
+C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Temp\bin\Debug\NavMeshComponentsEditor.pdb
+C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Temp\bin\Debug\NavMeshComponents.pdb
+C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Temp\bin\Debug\Unity.InputSystem.pdb
+C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Temp\bin\Debug\UnityEditor.UI.xml
+C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Temp\bin\Debug\Unity.AssetBundleBrowser.Editor.dll
+C:\Users\jason\OneDrive\Documents\GitHub\11Years\ClimateChange\Temp\bin\Debug\Unity.AssetBundleBrowser.Editor.pdb
