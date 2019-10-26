@@ -120,3 +120,5 @@ crashlytics-build.properties/ClimateChange/Library/*
 /ClimateChange/Library/shadercompiler-UnityShaderCompiler.exe3.log
 /ClimateChange/Library/UIElements/EditorWindows/UnityEditor.InspectorWindow.pref
 ClimateChange/Library
+/ClimateChange/Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll
+/ClimateChange/Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll
