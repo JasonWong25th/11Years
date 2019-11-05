@@ -3,7 +3,12 @@ guid: 5ef786b9d7cc9964f8aedb2566a1fe37
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - ZooPlankton: {instanceID: 0}
+  - Shrimp: {fileID: 21300000, guid: e08e3348772e1ce4ab96d188ef9f2255, type: 3}
+  - Crabs: {instanceID: 0}
+  - Crayfish: {instanceID: 0}
+  - Mullocus: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
