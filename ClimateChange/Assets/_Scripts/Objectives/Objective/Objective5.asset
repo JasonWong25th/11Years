@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Objective5
   m_EditorClassIdentifier: 
   name: Objective 5
-  description: Hunt 15 Molluscs
-  toEat: 15
+  description: Hunt 5 Crabs
+  toEat: 5
   eaten: 0
   isActive: 0
-  type: 2
+  type: 4
