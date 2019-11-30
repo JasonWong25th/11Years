@@ -14,9 +14,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/_Scenes/Start Screen PC.unity
     guid: 90fabe7f698ea964ba05f449cf932dc5
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/_Scenes/Level1.unity
-    guid: d64f9e76513d835448a5cc4ef57ff15a
+    path: Assets/_Scenes/Level1_REMOTE_4.unity
+    guid: 9d396db4d6c99b44b85cacfe7dd48ef0
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 4be363673aec91a47919093ded7b9476,
       type: 2}
