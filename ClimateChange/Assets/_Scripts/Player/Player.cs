@@ -172,7 +172,7 @@ public class Player : MonoBehaviour
     //Is called multiple time per frame, use for physics
     void FixedUpdate()
     {
-        Debug.Log(transform.rotation.eulerAngles.x);
+//        Debug.Log(transform.rotation.eulerAngles.x);
         if (isInControl && isPauseOn == false)
         {
             if (!dead)
@@ -293,20 +293,30 @@ public class Player : MonoBehaviour
         // Need to convert steeringThrust into a force to be applied to in terms of world space
         Vector3 localRot = (steeringThrust / rb.mass) * Time.deltaTime;
         Vector3 worldRot = transform.localToWorldMatrix.MultiplyVector(localRot);
-        
-        //float angleChange = 0f;
-        Quaternion targetRot = Quaternion.LookRotation(transform.forward + worldRot);
-        /*if (transform.rotation.eulerAngles.x <= 80  || transform.rotation.eulerAngles.x <= 80)
-        {
-            Debug.Log("EXCEEDING");
-            //Vector3 TargetEulers = targetRot.eulerAngles;
-            //targetRot = Quaternion.Euler(Mathf.Clamp(TargetEulers.x, rotMin, rotMax), TargetEulers.y, TargetEulers.z);
-            //
 
-            //get axis and angle of target rotation
-            //
+        //float angleChange = 0f;
+        Vector3 lookVector = Vector3.Normalize(transform.forward + worldRot);
+        if (lookVector.y >= 0.8f)
+        {
+            lookVector.y = 0.8f;
         }
-        */
+        if(lookVector.y <= -.8f)
+        {
+            lookVector.y = -0.8f;
+        }
+
+        Quaternion targetRot = Quaternion.LookRotation(lookVector);
+        //if (transform.rotation.x >= 40  || transform.rotation.x <= -80)
+        //{
+        //    Debug.Log("EXCEEDING");
+        //    //Vector3 TargetEulers = targetRot.eulerAngles;
+        //    //targetRot = Quaternion.Euler(Mathf.Clamp(TargetEulers.x, rotMin, rotMax), TargetEulers.y, TargetEulers.z);
+        //    //
+
+        //    //get axis and angle of target rotation
+        //    //
+        //}
+
         Quaternion currentRot = rb.rotation;
         float angleDelta = Quaternion.Angle(currentRot, targetRot);
 
