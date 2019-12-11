@@ -8,7 +8,7 @@ public enum Platform
 {
     PC,
     Xbox,
-    Mobile,
+    PS4,
     Logitech
 
 }

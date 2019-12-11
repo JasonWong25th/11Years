@@ -82,6 +82,7 @@ public class InputManager : MonoBehaviour
                 pasue = false;
             }
         }
+
         if (!inverted)
         {
             if (GameManager.Instance.Platform == Platform.PC)
@@ -103,6 +104,22 @@ public class InputManager : MonoBehaviour
                 });
                 Debug.Log("This is controller");
             }
+            else if (GameManager.Instance.Platform == Platform.Xbox)
+            {
+                EventSystem.instance.RaiseEvent(new KeyboardPressed
+                {
+                    horizontal = Input.GetAxis("XboxOne_RightJoyStickX"),
+                    vertical = Input.GetAxis("XboxOne_RightJoyStickY")
+                });
+            }
+            else if (GameManager.Instance.Platform == Platform.PS4)
+            {
+                EventSystem.instance.RaiseEvent(new KeyboardPressed
+                {
+                    horizontal = Input.GetAxis("PS4_RightJoyStickX"),
+                    vertical = Input.GetAxis("PS4_RightJoyStickY")
+                });
+            }
         }
         else
         {
@@ -114,6 +131,22 @@ public class InputManager : MonoBehaviour
                     vertical = Input.GetAxis("Vertical") * -1
                 });
                 //            Debug.Log("This is PC");
+            }
+            else if (GameManager.Instance.Platform == Platform.Xbox)
+            {
+                EventSystem.instance.RaiseEvent(new KeyboardPressed
+                {
+                    horizontal = Input.GetAxis("XboxOne_RightJoyStickX"),
+                    vertical = Input.GetAxis("XboxOne_RightJoyStickY") * -1
+                });
+            }
+            else if (GameManager.Instance.Platform == Platform.PS4)
+            {
+                EventSystem.instance.RaiseEvent(new KeyboardPressed
+                {
+                    horizontal = Input.GetAxis("PS4_RightJoyStickX"),
+                    vertical = Input.GetAxis("PS4_RightJoyStickY") * -1
+                });
             }
             else if (GameManager.Instance.Platform == Platform.Logitech)
             {

@@ -21,9 +21,6 @@ public class ControllerDetection : GamepadChecker
     public override void SwitchToController()
     {
         gamepadEnabled = true;
-        EventSystem.instance.RaiseEvent(new ChangeInputType
-        {
-            platform = Platform.Logitech
-        });
+        CheckControllerType(names[0].Length);
     }
 }

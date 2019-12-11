@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using GH;
 
 namespace Michsky.UI.Zone
 {
@@ -25,6 +26,7 @@ namespace Michsky.UI.Zone
 
         private TooltipManagerDesktop tooltipDesktopScript;
         private GamepadChecker checkerScript;
+        protected string[] names;
         private int GamepadConnected = 0;
         private Vector3 startMousePos;
         private Vector3 startPos;
@@ -52,11 +54,11 @@ namespace Michsky.UI.Zone
 
         void Update()
         {
-            string[] names = Input.GetJoystickNames();
+            names = Input.GetJoystickNames();
 
             for (int x = 0; x < names.Length; x++)
             {
-                // print(names[x].Length); Just for testing stuff
+                print(names[x].Length); //Just for testing stuff
 
                 if (names[x].Length >= 1)
                 {
@@ -80,6 +82,30 @@ namespace Michsky.UI.Zone
             }
         }
 
+        public void CheckControllerType(int i)
+        {
+            if (i == 19)
+            {
+                Debug.Log("This should be setup for a PS4 Controller");
+                GH.EventSystem.instance.RaiseEvent(new ChangeInputType
+                {
+                    platform = Platform.PS4
+                });
+                //switch the input to be for PS4 as well as the UI prompts
+            }
+            else if (i == 33)
+            {
+                Debug.Log("This should be setup for an Xbox Controller");
+                GH.EventSystem.instance.RaiseEvent(new ChangeInputType
+                {
+                    platform = Platform.Xbox
+                });
+                //swutch the input to be for Xbox Controller as well as the UI prompts
+            }
+            // ... check for logitech and any other controller types we need
+            // these are arbitrary numbers Unity made to identify controller types in GetJoySticksNames function
+        }
+
         public virtual void SwitchToController()
         {
             for (int i = 0; i < keyboardObjects.Count; i++)
@@ -94,7 +120,29 @@ namespace Michsky.UI.Zone
 
             gamepadEnabled = true;
             eventSystem.SetActive(false);
+
+            //should switch next
+            CheckControllerType(names[0].Length);
+
+
             virtualCursor.SetActive(true);
+
+            if(names[0].Length != 19 && names[0].Length != 33)
+            {
+                virtualCursor.GetComponent<VirtualCursor>().horizontalAxis = "RightJoyStickX";
+                virtualCursor.GetComponent<VirtualCursor>().verticalAxis = "RightJoyStickY";
+            }
+            else if(names[0].Length == 33)
+            {
+                virtualCursor.GetComponent<VirtualCursor>().horizontalAxis = "XboxOne_RightJoyStickX";
+                virtualCursor.GetComponent<VirtualCursor>().verticalAxis = "XboxOne_RightJoyStickY";
+            }
+            else if(names[0].Length == 19)
+            {
+                virtualCursor.GetComponent<VirtualCursor>().horizontalAxis = "PS4_RightJoyStickX";
+                virtualCursor.GetComponent<VirtualCursor>().verticalAxis = "PS4_RightJoyStickY";
+            }
+           
             virtualCursorContent.SetActive(true);
             tooltipDesktop.SetActive(false);
             tooltipDesktopScript.enabled = false;
