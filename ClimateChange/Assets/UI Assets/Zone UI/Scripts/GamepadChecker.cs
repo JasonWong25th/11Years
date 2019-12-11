@@ -93,6 +93,14 @@ namespace Michsky.UI.Zone
                 });
                 //switch the input to be for PS4 as well as the UI prompts
             }
+            else if(i == 20)
+            {
+                Debug.Log("This should be setup for a Logitech Controller");
+                GH.EventSystem.instance.RaiseEvent(new ChangeInputType
+                {
+                    platform = Platform.Logitech
+                });
+            }
             else if (i == 33)
             {
                 Debug.Log("This should be setup for an Xbox Controller");
@@ -127,7 +135,7 @@ namespace Michsky.UI.Zone
 
             virtualCursor.SetActive(true);
 
-            if(names[0].Length != 19 && names[0].Length != 33)
+            if(names[0].Length == 20)
             {
                 virtualCursor.GetComponent<VirtualCursor>().horizontalAxis = "RightJoyStickX";
                 virtualCursor.GetComponent<VirtualCursor>().verticalAxis = "RightJoyStickY";

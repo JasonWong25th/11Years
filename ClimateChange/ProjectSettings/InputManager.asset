@@ -1046,7 +1046,7 @@ InputManager:
     axis: 5
     joyNum: 0
   - serializedVersion: 3
-    m_Name: RightJoystickX
+    m_Name: Logitech_RightJoystickX
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -1062,7 +1062,7 @@ InputManager:
     axis: 2
     joyNum: 0
   - serializedVersion: 3
-    m_Name: RightJoystickY
+    m_Name: Logitech_RightJoystickY
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 

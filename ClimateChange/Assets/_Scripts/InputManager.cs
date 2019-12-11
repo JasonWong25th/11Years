@@ -99,8 +99,8 @@ public class InputManager : MonoBehaviour
                 EventSystem.instance.RaiseEvent(new KeyboardPressed
                 {
 
-                    horizontal = Input.GetAxis("RightJoystickX"),
-                    vertical = Input.GetAxis("RightJoystickY")
+                    horizontal = Input.GetAxis("Logitech_RightJoystickX"),
+                    vertical = Input.GetAxis("Logitech_RightJoystickY")
                 });
                 Debug.Log("This is controller");
             }
@@ -153,8 +153,8 @@ public class InputManager : MonoBehaviour
                 EventSystem.instance.RaiseEvent(new KeyboardPressed
                 {
 
-                    horizontal = Input.GetAxis("RightJoystickX"),
-                    vertical = Input.GetAxis("RightJoystickY") * -1
+                    horizontal = Input.GetAxis("Logitech_RightJoystickX"),
+                    vertical = Input.GetAxis("Logitech_RightJoystickY") * -1
                 });
                 Debug.Log("This is controller");
             }
