@@ -137,8 +137,8 @@ namespace Michsky.UI.Zone
 
             if(names[0].Length == 20)
             {
-                virtualCursor.GetComponent<VirtualCursor>().horizontalAxis = "RightJoyStickX";
-                virtualCursor.GetComponent<VirtualCursor>().verticalAxis = "RightJoyStickY";
+                virtualCursor.GetComponent<VirtualCursor>().horizontalAxis = "Logitech_RightJoyStickX";
+                virtualCursor.GetComponent<VirtualCursor>().verticalAxis = "Logitech_RightJoyStickY";
             }
             else if(names[0].Length == 33)
             {

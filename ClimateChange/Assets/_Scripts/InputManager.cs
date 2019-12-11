@@ -186,7 +186,7 @@ public class InputManager : MonoBehaviour
 
 
         //I edited the Input for Fires since there was an error for me if you don't have one change it back to what works
-        if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Joystick1Button1))//Rush Button
+        if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.JoystickButton1))//Rush Button
         {
             //_rush = true;
             EventSystem.instance.RaiseEvent(new Rushing
@@ -201,7 +201,7 @@ public class InputManager : MonoBehaviour
         }
 
         //The following isn't good enough because time needs to pass before returning back to false
-        if (Input.GetKeyUp(KeyCode.E) || Input.GetKeyUp(KeyCode.Joystick1Button2))//Eat Button
+        if (Input.GetKeyUp(KeyCode.E) || Input.GetKeyUp(KeyCode.JoystickButton2))//Eat Button
         {
             EventSystem.instance.RaiseEvent(new Eat { eat = true });
         }
@@ -215,7 +215,7 @@ public class InputManager : MonoBehaviour
             //_pause = !_pause;
         }
 
-        if (Input.GetMouseButton(0) || Input.GetKey(KeyCode.Joystick1Button7) || Input.GetKey(KeyCode.Joystick1Button6))
+        if (Input.GetMouseButton(0) || Input.GetKey(KeyCode.JoystickButton7) || Input.GetKey(KeyCode.JoystickButton6))
         {
             EventSystem.instance.RaiseEvent(new MouseClickedData { clicked = true });
         }
@@ -226,12 +226,12 @@ public class InputManager : MonoBehaviour
 
         if (checkRestartButton)
         {
-            if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Joystick1Button0))
+            if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.JoystickButton0))
             {
                 EventSystem.instance.RaiseEvent(new Restart { });
             }
         }
-        if (Input.GetKey(KeyCode.M) || Input.GetKey(KeyCode.Joystick1Button2))
+        if (Input.GetKey(KeyCode.M) || Input.GetKey(KeyCode.JoystickButton2))
         {
             EventSystem.instance.RaiseEvent(new OnDismissCollectable { });
         }
