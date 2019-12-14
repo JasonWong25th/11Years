@@ -16,5 +16,5 @@ MonoBehaviour:
   description: Hunt 10 Crabs
   toEat: 10
   eaten: 0
-  isActive: 0
+  isActive: 1
   type: 4

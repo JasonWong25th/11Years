@@ -54,7 +54,7 @@ public class ObjectiveManager : MonoBehaviour
         eaten = currObjective.eaten;
         toEat = currObjective.toEat;
 
-        if (eaten == toEat)
+        if (eaten >= toEat)
         {
             //When you finish the current Objective add this line
             
