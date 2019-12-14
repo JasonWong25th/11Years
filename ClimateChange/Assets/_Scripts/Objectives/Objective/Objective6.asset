@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Objective6
   m_EditorClassIdentifier: 
   name: Objective 6
-  description: Hunt 10 Small Crabs
+  description: Hunt 10 Crabs
   toEat: 10
   eaten: 0
   isActive: 0
