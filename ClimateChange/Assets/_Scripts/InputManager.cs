@@ -186,7 +186,10 @@ public class InputManager : MonoBehaviour
 
 
         //I edited the Input for Fires since there was an error for me if you don't have one change it back to what works
-        if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.JoystickButton1))//Rush Button
+        if ((GameManager.Instance.Platform == Platform.PC && (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.R))) ||
+            (GameManager.Instance.Platform == Platform.Xbox && Input.GetKeyDown(KeyCode.JoystickButton1))||
+            ((GameManager.Instance.Platform == Platform.PS4 || GameManager.Instance.Platform == Platform.Logitech) && Input.GetKeyDown(KeyCode.JoystickButton2))
+            )//Rush Button
         {
             //_rush = true;
             EventSystem.instance.RaiseEvent(new Rushing
@@ -201,7 +204,10 @@ public class InputManager : MonoBehaviour
         }
 
         //The following isn't good enough because time needs to pass before returning back to false
-        if (Input.GetKeyUp(KeyCode.E) || Input.GetKeyUp(KeyCode.JoystickButton2))//Eat Button
+        if ((GameManager.Instance.Platform == Platform.PC && Input.GetKeyUp(KeyCode.E)) || 
+            ((GameManager.Instance.Platform == Platform.Logitech || GameManager.Instance.Platform == Platform.PS4) && Input.GetKeyUp(KeyCode.JoystickButton0))||
+            (GameManager.Instance.Platform == Platform.Xbox && Input.GetKeyUp(KeyCode.JoystickButton2))
+            )//Eat Button
         {
             EventSystem.instance.RaiseEvent(new Eat { eat = true });
         }
@@ -215,7 +221,10 @@ public class InputManager : MonoBehaviour
             //_pause = !_pause;
         }
 
-        if (Input.GetMouseButton(0) || Input.GetKey(KeyCode.JoystickButton7) || Input.GetKey(KeyCode.JoystickButton6))
+        if ((GameManager.Instance.Platform == Platform.PC && Input.GetMouseButton(0)) || 
+            ((GameManager.Instance.Platform == Platform.PS4 || GameManager.Instance.Platform == Platform.Logitech) && (Input.GetKey(KeyCode.JoystickButton7)) || Input.GetKey(KeyCode.JoystickButton6))||
+            (GameManager.Instance.Platform == Platform.Xbox && (Input.GetAxis("Xbox_RightTrigger")!=0 || Input.GetAxis("Xbox_LeftTrigger") != 0))
+            )
         {
             EventSystem.instance.RaiseEvent(new MouseClickedData { clicked = true });
         }
@@ -226,12 +235,17 @@ public class InputManager : MonoBehaviour
 
         if (checkRestartButton)
         {
-            if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.JoystickButton0))
+
+            if (
+                (Input.GetKey(KeyCode.Space) && GameManager.Instance.Platform == Platform.PC) || 
+                (Input.GetKey(KeyCode.JoystickButton3) && (GameManager.Instance.Platform == Platform.PS4 || GameManager.Instance.Platform == Platform.Logitech))||
+                (Input.GetKey(KeyCode.JoystickButton3) && GameManager.Instance.Platform == Platform.Xbox)
+                )
             {
                 EventSystem.instance.RaiseEvent(new Restart { });
             }
         }
-        if (Input.GetKey(KeyCode.M) || Input.GetKey(KeyCode.JoystickButton2))
+        if (Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.JoystickButton0) || Input.GetKey(KeyCode.JoystickButton2) || Input.GetKey(KeyCode.JoystickButton1) || Input.GetKey(KeyCode.JoystickButton3))
         {
             EventSystem.instance.RaiseEvent(new OnDismissCollectable { });
         }
