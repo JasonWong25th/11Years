@@ -145,7 +145,7 @@ namespace Michsky.UI.Zone
                 virtualCursor.GetComponent<VirtualCursor>().horizontalAxis = "XboxOne_RightJoyStickX";
                 virtualCursor.GetComponent<VirtualCursor>().verticalAxis = "XboxOne_RightJoyStickY";
             }
-            else if(names[0].Length == 19)
+            else if((names[0].Length == 19))
             {
                 virtualCursor.GetComponent<VirtualCursor>().horizontalAxis = "PS4_RightJoyStickX";
                 virtualCursor.GetComponent<VirtualCursor>().verticalAxis = "PS4_RightJoyStickY";
