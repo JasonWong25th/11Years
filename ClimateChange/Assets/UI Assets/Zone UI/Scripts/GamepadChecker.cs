@@ -71,6 +71,7 @@ namespace Michsky.UI.Zone
                 }
             }
 
+
             if (GamepadConnected == 1 && gamepadEnabled == false)
             {
                 SwitchToController();
@@ -131,22 +132,27 @@ namespace Michsky.UI.Zone
 
             //should switch next
             CheckControllerType(names[0].Length);
-
-
             virtualCursor.SetActive(true);
 
-            if(names[0].Length == 20)
+#if PLATFORM_IOS
+
+#endif
+
+            if((names[0].Length == 20) || (names[0].Length == 29))
             {
+                Debug.Log("Controller name Logitech");
                 virtualCursor.GetComponent<VirtualCursor>().horizontalAxis = "Logitech_RightJoyStickX";
                 virtualCursor.GetComponent<VirtualCursor>().verticalAxis = "Logitech_RightJoyStickY";
             }
             else if(names[0].Length == 33)
             {
+                Debug.Log("Controller name Xbox");
                 virtualCursor.GetComponent<VirtualCursor>().horizontalAxis = "XboxOne_RightJoyStickX";
                 virtualCursor.GetComponent<VirtualCursor>().verticalAxis = "XboxOne_RightJoyStickY";
             }
-            else if((names[0].Length == 19))
+            else if((names[0].Length == 19)|| (names[0].Length == 50))
             {
+                Debug.Log("Controller name PS4");
                 virtualCursor.GetComponent<VirtualCursor>().horizontalAxis = "PS4_RightJoyStickX";
                 virtualCursor.GetComponent<VirtualCursor>().verticalAxis = "PS4_RightJoyStickY";
             }
